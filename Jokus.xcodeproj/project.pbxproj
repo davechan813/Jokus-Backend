@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18B35E2D2056233500BC1B03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E2C2056233500BC1B03 /* AppDelegate.swift */; };
+		18B35E2F2056233500BC1B03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E2E2056233500BC1B03 /* ViewController.swift */; };
+		18B35E322056233500BC1B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B35E302056233500BC1B03 /* Main.storyboard */; };
+		18B35E342056233500BC1B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B35E332056233500BC1B03 /* Assets.xcassets */; };
+		18B35E372056233500BC1B03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B35E352056233500BC1B03 /* LaunchScreen.storyboard */; };
+		18B35E3F20562DB800BC1B03 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E3E20562DB800BC1B03 /* LoginViewController.swift */; };
+		18B35E412056354000BC1B03 /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E402056354000BC1B03 /* RoundCornerButton.swift */; };
+		18B35E4320564BF800BC1B03 /* RoundCornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E4220564BF800BC1B03 /* RoundCornerImage.swift */; };
+		18B35E492056654B00BC1B03 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E482056654B00BC1B03 /* SignUpViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18B35E292056233500BC1B03 /* Jokus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B35E2C2056233500BC1B03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18B35E2E2056233500BC1B03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18B35E312056233500BC1B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18B35E332056233500BC1B03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18B35E362056233500BC1B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18B35E382056233600BC1B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B35E3E20562DB800BC1B03 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18B35E402056354000BC1B03 /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
+		18B35E4220564BF800BC1B03 /* RoundCornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerImage.swift; sourceTree = "<group>"; };
+		18B35E482056654B00BC1B03 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18B35E262056233500BC1B03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180B3C002057B73F00D88491 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180B3C012057B74800D88491 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18B35E302056233500BC1B03 /* Main.storyboard */,
+				18B35E332056233500BC1B03 /* Assets.xcassets */,
+				18B35E352056233500BC1B03 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180B3C022057B74D00D88491 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18B35E2C2056233500BC1B03 /* AppDelegate.swift */,
+				18B35E2E2056233500BC1B03 /* ViewController.swift */,
+				18B35E3E20562DB800BC1B03 /* LoginViewController.swift */,
+				18B35E402056354000BC1B03 /* RoundCornerButton.swift */,
+				18B35E4220564BF800BC1B03 /* RoundCornerImage.swift */,
+				18B35E482056654B00BC1B03 /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180B3C032057B77500D88491 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18B35E382056233600BC1B03 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18B35E202056233500BC1B03 = {
+			isa = PBXGroup;
+			children = (
+				18B35E2B2056233500BC1B03 /* Jokus */,
+				18B35E2A2056233500BC1B03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18B35E2A2056233500BC1B03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18B35E292056233500BC1B03 /* Jokus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18B35E2B2056233500BC1B03 /* Jokus */ = {
+			isa = PBXGroup;
+			children = (
+				180B3C032057B77500D88491 /* Supporting Files */,
+				180B3C022057B74D00D88491 /* Controller */,
+				180B3C012057B74800D88491 /* View */,
+				180B3C002057B73F00D88491 /* Model */,
+			);
+			path = Jokus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18B35E282056233500BC1B03 /* Jokus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B35E3B2056233600BC1B03 /* Build configuration list for PBXNativeTarget "Jokus" */;
+			buildPhases = (
+				18B35E252056233500BC1B03 /* Sources */,
+				18B35E262056233500BC1B03 /* Frameworks */,
+				18B35E272056233500BC1B03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jokus;
+			productName = Jokus;
+			productReference = 18B35E292056233500BC1B03 /* Jokus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18B35E212056233500BC1B03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Jokus;
+				TargetAttributes = {
+					18B35E282056233500BC1B03 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18B35E242056233500BC1B03 /* Build configuration list for PBXProject "Jokus" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18B35E202056233500BC1B03;
+			productRefGroup = 18B35E2A2056233500BC1B03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18B35E282056233500BC1B03 /* Jokus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18B35E272056233500BC1B03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B35E372056233500BC1B03 /* LaunchScreen.storyboard in Resources */,
+				18B35E342056233500BC1B03 /* Assets.xcassets in Resources */,
+				18B35E322056233500BC1B03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18B35E252056233500BC1B03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B35E3F20562DB800BC1B03 /* LoginViewController.swift in Sources */,
+				18B35E492056654B00BC1B03 /* SignUpViewController.swift in Sources */,
+				18B35E4320564BF800BC1B03 /* RoundCornerImage.swift in Sources */,
+				18B35E2F2056233500BC1B03 /* ViewController.swift in Sources */,
+				18B35E2D2056233500BC1B03 /* AppDelegate.swift in Sources */,
+				18B35E412056354000BC1B03 /* RoundCornerButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18B35E302056233500BC1B03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18B35E312056233500BC1B03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18B35E352056233500BC1B03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18B35E362056233500BC1B03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18B35E392056233600BC1B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18B35E3A2056233600BC1B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18B35E3C2056233600BC1B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Jokus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jokus.Jokus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18B35E3D2056233600BC1B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Jokus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jokus.Jokus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18B35E242056233500BC1B03 /* Build configuration list for PBXProject "Jokus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B35E392056233600BC1B03 /* Debug */,
+				18B35E3A2056233600BC1B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18B35E3B2056233600BC1B03 /* Build configuration list for PBXNativeTarget "Jokus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B35E3C2056233600BC1B03 /* Debug */,
+				18B35E3D2056233600BC1B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18B35E212056233500BC1B03 /* Project object */;
+}
