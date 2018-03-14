@@ -16,6 +16,9 @@
 		18B35E412056354000BC1B03 /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E402056354000BC1B03 /* RoundCornerButton.swift */; };
 		18B35E4320564BF800BC1B03 /* RoundCornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E4220564BF800BC1B03 /* RoundCornerImage.swift */; };
 		18B35E492056654B00BC1B03 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B35E482056654B00BC1B03 /* SignUpViewController.swift */; };
+		18C100BB2058D0CA006DEEC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C100BA2058D0CA006DEEC4 /* MapViewController.swift */; };
+		18C100BD2058D0FB006DEEC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C100BC2058D0FB006DEEC4 /* ProfileViewController.swift */; };
+		18C100BF2058D11F006DEEC4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C100BE2058D11F006DEEC4 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		18B35E402056354000BC1B03 /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		18B35E4220564BF800BC1B03 /* RoundCornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerImage.swift; sourceTree = "<group>"; };
 		18B35E482056654B00BC1B03 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		18C100BA2058D0CA006DEEC4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		18C100BC2058D0FB006DEEC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18C100BE2058D11F006DEEC4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				18B35E402056354000BC1B03 /* RoundCornerButton.swift */,
 				18B35E4220564BF800BC1B03 /* RoundCornerImage.swift */,
 				18B35E482056654B00BC1B03 /* SignUpViewController.swift */,
+				18C100BA2058D0CA006DEEC4 /* MapViewController.swift */,
+				18C100BC2058D0FB006DEEC4 /* ProfileViewController.swift */,
+				18C100BE2058D11F006DEEC4 /* FeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -76,7 +85,6 @@
 		180B3C032057B77500D88491 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18B35E382056233600BC1B03 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 		18B35E2B2056233500BC1B03 /* Jokus */ = {
 			isa = PBXGroup;
 			children = (
+				18B35E382056233600BC1B03 /* Info.plist */,
 				180B3C032057B77500D88491 /* Supporting Files */,
 				180B3C022057B74D00D88491 /* Controller */,
 				180B3C012057B74800D88491 /* View */,
@@ -181,11 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B35E3F20562DB800BC1B03 /* LoginViewController.swift in Sources */,
+				18C100BF2058D11F006DEEC4 /* FeedViewController.swift in Sources */,
 				18B35E492056654B00BC1B03 /* SignUpViewController.swift in Sources */,
 				18B35E4320564BF800BC1B03 /* RoundCornerImage.swift in Sources */,
 				18B35E2F2056233500BC1B03 /* ViewController.swift in Sources */,
 				18B35E2D2056233500BC1B03 /* AppDelegate.swift in Sources */,
 				18B35E412056354000BC1B03 /* RoundCornerButton.swift in Sources */,
+				18C100BD2058D0FB006DEEC4 /* ProfileViewController.swift in Sources */,
+				18C100BB2058D0CA006DEEC4 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
