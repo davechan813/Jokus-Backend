@@ -1,3 +1,8 @@
+/****************************************************
+ author: Guo Jiayu, potplus@live.com, http://gjyu.me
+ the damianX back-end software is a private property
+ Copyright 2018 Guo Jiayu
+ *****************************************************/
 package com.damx.security;
 
 import java.security.SecureRandom; // i mean it's pretty secure
