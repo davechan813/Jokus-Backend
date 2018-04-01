@@ -5,14 +5,25 @@
  *****************************************************/
 package com.damx.mvc;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.damx.security.TokenGenerator;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 @RestController
 public class UserController {
+
+    private AmazonClient amazonClient;
+
+    @Autowired
+    UserController(AmazonClient amazonClient)
+    {
+        this.amazonClient = amazonClient;
+    }
+
     @RequestMapping(value = "/showCustomer", method = RequestMethod.POST)
     public Customer customer(@RequestParam(value="firstname", defaultValue="Jack") String name)
     {
@@ -21,6 +32,7 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
 
     @RequestMapping(value="/findByLastName", method = RequestMethod.POST)
     public @ResponseBody List<User> findUserByLastName(@RequestParam String name)
@@ -100,6 +112,60 @@ public class UserController {
         }
     }
 
+
+    public Integer getIdByToken(String token)
+    {
+        return userRepository.findByToken(token).getId();
+    }
+
+
+
+    @RequestMapping(value="/setUserProfilePic", method = RequestMethod.POST)
+    public @ResponseBody String setUserProfilePic(@RequestParam String token, @RequestParam MultipartFile file)
+    {
+        int userid = getIdByToken(token);
+        BucketController buck = new BucketController(this.amazonClient);
+        return buck.uploadFileWithName(file, "user_" + Integer.toString(userid) + "_profile.jpg");
+    }
+
+    @RequestMapping(value="/setUserCoverPic", method = RequestMethod.POST)
+    public @ResponseBody String setUserCoverPic(@RequestParam String token, @RequestParam MultipartFile file)
+    {
+        int userid = getIdByToken(token);
+        BucketController buck = new BucketController(this.amazonClient);
+        return buck.uploadFileWithName(file, "user_" + Integer.toString(userid) + "_cover.jpg");
+    }
+
+
+    @RequestMapping(value="/getUserProfilePic", method = RequestMethod.POST)
+    public @ResponseBody ResponseEntity<byte[]> getUserProfilePic(@RequestParam String token)
+    {
+        int userid = getIdByToken(token);
+        BucketController buck = new BucketController(this.amazonClient);
+        try {
+            return buck.download("user_" + Integer.toString(userid) + "_profile.jpg");
+        }
+        catch(Exception e)
+        {
+            return null;
+        }
+
+    }
+
+    @RequestMapping(value="/getUserCoverPic", method = RequestMethod.POST)
+    public @ResponseBody ResponseEntity<byte[]> getUserCoverPic(@RequestParam String token)
+    {
+        int userid = getIdByToken(token);
+        BucketController buck = new BucketController(this.amazonClient);
+        try {
+            return buck.download("user_" + Integer.toString(userid) + "_cover.jpg");
+        }
+        catch(Exception e)
+        {
+            return null;
+        }
+
+    }
 
 
 

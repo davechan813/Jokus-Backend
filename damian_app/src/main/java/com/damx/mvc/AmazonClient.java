@@ -68,6 +68,21 @@ public class AmazonClient {
         return fileUrl;
     }
 
+    public String uploadFilewithName(MultipartFile multipartFile, String name)
+    {
+        String fileUrl = "";
+        try {
+            File file = convertMultiPartToFile(multipartFile);
+            String fileName = name;
+            fileUrl = endpointUrl + "/" + bucketName + "/" + fileName;
+            uploadFileTos3bucket(fileName, file);
+            file.delete();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return fileUrl;
+    }
+
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
         File convFile = new File(file.getOriginalFilename());
         FileOutputStream fos = new FileOutputStream(convFile);

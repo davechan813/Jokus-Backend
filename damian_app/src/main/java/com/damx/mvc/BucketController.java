@@ -19,9 +19,9 @@ import java.net.URLEncoder;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-
-@RestController
-@RequestMapping("/storage/")
+//
+//@RestController
+//@RequestMapping("/storage/")
 public class BucketController {
 
     private AmazonClient amazonClient;
@@ -31,18 +31,22 @@ public class BucketController {
         this.amazonClient = amazonClient;
     }
 
-    @PostMapping("/uploadFile")
-    public String uploadFile(@RequestPart(value = "file") MultipartFile file) {
+//    @PostMapping("/uploadFile")
+//    public String uploadFile(@RequestPart(value = "file") MultipartFile file) {
+//        return this.amazonClient.uploadFile(file);
+//    }
+
+    public String uploadFile(MultipartFile file) {
         return this.amazonClient.uploadFile(file);
     }
 
-    @DeleteMapping("/deleteFile")
-    public String deleteFile(@RequestPart(value = "url") String fileUrl) {
+//    @DeleteMapping("/deleteFile")
+    public String deleteFile(String fileUrl) {
         return this.amazonClient.deleteFileFromS3Bucket(fileUrl);
     }
 
-    @RequestMapping("/download")
-    public @ResponseBody ResponseEntity<byte[]> download(@RequestPart(value= "key") String key) throws IOException {
+//    @RequestMapping("/download")
+    public ResponseEntity<byte[]> download(String key) throws IOException {
 
         S3Object s3Object = amazonClient.download(amazonClient.getBucketName(), key);
 
@@ -60,5 +64,9 @@ public class BucketController {
         return new ResponseEntity<>(bytes, httpHeaders, HttpStatus.OK);
     }
 
+    public String uploadFileWithName(MultipartFile file, String name)
+    {
+        return this.amazonClient.uploadFilewithName(file, name);
+    }
 
 }
