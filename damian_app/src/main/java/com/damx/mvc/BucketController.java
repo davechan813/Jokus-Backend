@@ -8,6 +8,17 @@ package com.damx.mvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.http.ResponseEntity;
+import java.io.IOException;
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.model.S3ObjectInputStream;
+import org.apache.commons.io.IOUtils;
+import java.net.URLEncoder;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 
 @RestController
 @RequestMapping("/storage/")
@@ -29,4 +40,25 @@ public class BucketController {
     public String deleteFile(@RequestPart(value = "url") String fileUrl) {
         return this.amazonClient.deleteFileFromS3Bucket(fileUrl);
     }
+
+    @RequestMapping("/download")
+    public @ResponseBody ResponseEntity<byte[]> download(@RequestPart(value= "key") String key) throws IOException {
+
+        S3Object s3Object = amazonClient.download(amazonClient.getBucketName(), key);
+
+        S3ObjectInputStream objectInputStream = s3Object.getObjectContent();
+
+        byte[] bytes = IOUtils.toByteArray(objectInputStream);
+
+        String fileName = URLEncoder.encode(key, "UTF-8").replaceAll("\\+", "%20");
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        httpHeaders.setContentLength(bytes.length);
+        httpHeaders.setContentDispositionFormData("attachment", fileName);
+
+        return new ResponseEntity<>(bytes, httpHeaders, HttpStatus.OK);
+    }
+
+
 }

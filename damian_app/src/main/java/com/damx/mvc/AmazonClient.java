@@ -15,6 +15,7 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -32,6 +33,9 @@ public class AmazonClient {
 
     @Value("${amazonProperties.endpointUrl}")
     private String endpointUrl;
+
+
+
     @Value("${amazonProperties.bucketName}")
     private String bucketName;
     @Value("${amazonProperties.accessKey}")
@@ -43,6 +47,11 @@ public class AmazonClient {
     private void initializeAmazon() {
         AWSCredentials credentials = new BasicAWSCredentials(this.accessKey, this.secretKey);
         this.s3client = new AmazonS3Client(credentials);
+    }
+
+    public S3Object download(String bucketName, String key)
+    {
+        return this.s3client.getObject(bucketName, key);
     }
 
     public String uploadFile(MultipartFile multipartFile) {
@@ -80,6 +89,10 @@ public class AmazonClient {
         String fileName = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
         s3client.deleteObject(new DeleteObjectRequest(bucketName, fileName));
         return "Successfully deleted";
+    }
+
+    public String getBucketName() {
+        return bucketName;
     }
 
 }

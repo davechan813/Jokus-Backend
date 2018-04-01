@@ -1,1 +1,3 @@
-0.1.4: added file upload and delete protocols
+###DamianX app
+
+0.2: finished everything about S3 upload/download utils
