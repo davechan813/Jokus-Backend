@@ -26,6 +26,15 @@ public class Park {
     private String description;
     private String[] hours;
     private String address;
+    private String coord;
+
+    public String getCoord() {
+        return coord;
+    }
+
+    public void setCoord(String coord) {
+        this.coord = coord;
+    }
 
     @ManyToMany(cascade = {
             CascadeType.PERSIST,

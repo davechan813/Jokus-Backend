@@ -38,6 +38,7 @@ List<User> users . //ManyToMany*/
 // return the park id in String
     @RequestMapping(value= "/park/add", method = RequestMethod.POST)
     public @ResponseBody String addPark(@RequestParam String name,
+                                        @RequestParam String coord,
                                         @RequestParam String description,
                                         @RequestParam String hours,
                                         @RequestParam String address)
@@ -58,6 +59,7 @@ List<User> users . //ManyToMany*/
         }
 
         park.setHours(hrs);
+        park.setCoord(coord);
         park.setUsers(new ArrayList<User>());
         parkRepository.save(park);
         return park.getId().toString();
@@ -77,6 +79,8 @@ List<User> users . //ManyToMany*/
             User usr = userRepository.findByToken(token);
             if (usr == null)
                 return "-2"; //wrong token
+            if(myPark.getUsers().contains(usr))
+                return "-3"; // already checked in
             myPark.getUsers().add(usr);
             parkRepository.save(myPark);
             return new Integer(myPark.getUsers().size()).toString(); //return how many people checked in
@@ -99,6 +103,7 @@ List<User> users . //ManyToMany*/
             if (usr == null)
                 return "-2"; //wrong token
             myPark.getUsers().remove(usr);
+            parkRepository.save(myPark); //caution!!
             return new Integer(myPark.getUsers().size()).toString(); //return how many people checked in
         }
     }
