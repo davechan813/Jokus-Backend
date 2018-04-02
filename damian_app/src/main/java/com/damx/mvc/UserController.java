@@ -138,9 +138,9 @@ public class UserController {
 
 
     @RequestMapping(value="/getUserProfilePic", method = RequestMethod.POST)
-    public @ResponseBody ResponseEntity<byte[]> getUserProfilePic(@RequestParam String token)
+    public @ResponseBody ResponseEntity<byte[]> getUserProfilePic(@RequestParam String id)
     {
-        int userid = getIdByToken(token);
+        int userid = Integer.parseInt(id);
         BucketController buck = new BucketController(this.amazonClient);
         try {
             return buck.download("user_" + Integer.toString(userid) + "_profile.jpg");
@@ -153,9 +153,9 @@ public class UserController {
     }
 
     @RequestMapping(value="/getUserCoverPic", method = RequestMethod.POST)
-    public @ResponseBody ResponseEntity<byte[]> getUserCoverPic(@RequestParam String token)
+    public @ResponseBody ResponseEntity<byte[]> getUserCoverPic(@RequestParam String id)
     {
-        int userid = getIdByToken(token);
+        int userid = Integer.parseInt(id);
         BucketController buck = new BucketController(this.amazonClient);
         try {
             return buck.download("user_" + Integer.toString(userid) + "_cover.jpg");
