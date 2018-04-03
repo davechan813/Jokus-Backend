@@ -5,6 +5,7 @@
  *****************************************************/
 package com.damx.mvc;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.damx.security.TokenGenerator;
@@ -19,6 +20,14 @@ public class ParkController {
     private ParkRepository parkRepository;
     @Autowired
     private UserRepository userRepository;
+
+    private AmazonClient amazonClient;
+
+    @Autowired
+    ParkController(AmazonClient amazonClient)
+    {
+        this.amazonClient = amazonClient;
+    }
 
     @RequestMapping(value= "/park/all", method = RequestMethod.POST)
     public @ResponseBody Iterable<Park> allParks()
@@ -123,4 +132,20 @@ List<User> users . //ManyToMany*/
         }
     }
 
+
+    @RequestMapping(value="/park/getParkCoverPic", method = RequestMethod.POST)
+    public @ResponseBody
+    ResponseEntity<byte[]> getParkCoverPic(@RequestParam String id)
+    {
+        int parkid = Integer.parseInt(id);
+        BucketController buck = new BucketController(this.amazonClient);
+        try {
+            return buck.download("park_" + Integer.toString(parkid) + "_cover.jpg");
+        }
+        catch(Exception e)
+        {
+            return null;
+        }
+
+    }
 }
